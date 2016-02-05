@@ -1,0 +1,12 @@
+com\test\connection\OracleJDBC.class
+com\dto\oe\Product_Descriptions.class
+com\dto\oe\Warehouses.class
+com\dto\oe\Inventories.class
+com\dto\oe\Product_Information.class
+com\dto\oe\Cust_addressData.class
+com\test\connection\Inventories.class
+com\dto\oe\CustAddressType.class
+com\test\connection\HibernateUtil.class
+com\dto\oe\Order_Items.class
+com\dto\oe\Orders.class
+com\dto\oe\Customers.class
