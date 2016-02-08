@@ -78,6 +78,7 @@ public class HibernateUtil {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private Session getSession() {
 		return new Configuration().configure().buildSessionFactory()
 				.openSession();

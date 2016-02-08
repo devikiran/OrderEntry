@@ -25,7 +25,7 @@ public class Customers {
 
 	@Type(type = "com.dto.oe.CustAddressType")
 	@Column(name = "CUST_ADDRESS")
-	public Cust_addressData cust_addressData;
+	public Cust_addressData CUST_ADDRESS;
 
 	@Column(name = "NLS_LANGUAGE")
 	public String NLS_LANGUAGE;
@@ -83,11 +83,11 @@ public class Customers {
 	}
 
 	public Cust_addressData getCust_addressData() {
-		return cust_addressData;
+		return CUST_ADDRESS;
 	}
 
 	public void setCust_addressData(Cust_addressData cust_addressData) {
-		this.cust_addressData = cust_addressData;
+		this.CUST_ADDRESS = cust_addressData;
 	}
 
 	public String getNLS_LANGUAGE() {
