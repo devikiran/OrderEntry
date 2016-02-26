@@ -1,5 +1,6 @@
 package com.dto.oe;
 
+import java.awt.Point;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -44,8 +45,8 @@ public class Customers {
 
 /*	@Column(name = "CUST_GEO_LOCATION", columnDefinition = "MDSYS.SDO_GEOMETRY", nullable = false)
 	@Type(type = "org.hibernate.spatial.GeometryType")
-	public Point CUST_GEO_LOCATION;*/
-
+	public Point CUST_GEO_LOCATION;
+*/
 	@Column(name = "DATE_OF_BIRTH")
 	public Date DATE_OF_BIRTH;
 
@@ -55,8 +56,9 @@ public class Customers {
 	@Column(name = "INCOME_LEVEL")
 	public String INCOME_LEVEL;
 	
-	/*@Column(name="Phone_numbers")
-	public Object Phone_numbers;*/
+	@Type(type = "com.dto.oe.PhoneNumbersType")
+	@Column(name="PHONE_NUMBERS")
+	public PhoneNumbersData Phone_numbers;
 
 	public int getCUSTOMER_ID() {
 		return CUSTOMER_ID;
@@ -162,12 +164,21 @@ public class Customers {
 		INCOME_LEVEL = iNCOME_LEVEL;
 	}
 
-/*	public Object getPhone_numbers() {
+	public Cust_addressData getCUST_ADDRESS() {
+		return CUST_ADDRESS;
+	}
+
+	public void setCUST_ADDRESS(Cust_addressData cUST_ADDRESS) {
+		CUST_ADDRESS = cUST_ADDRESS;
+	}
+
+	public PhoneNumbersData getPhone_numbers() {
 		return Phone_numbers;
 	}
 
-	public void setPhone_numbers(Object phone_numbers) {
+	public void setPhone_numbers(PhoneNumbersData phone_numbers) {
 		Phone_numbers = phone_numbers;
-	}*/
+	}
+
 
 }

@@ -18,6 +18,8 @@
 		 -->
 		<mapping class="com.dto.oe.Inventories" />
 		<mapping class="com.dto.oe.Customers" />
-			<!-- <mapping class="com.dto.oe.Product_Information" /> -->
+		<mapping class="com.dto.oe.Orders" />
+		<mapping class="com.dto.oe.Product_Information" />
+		<mapping class="com.dto.oe.Order_Items"/>
 	</session-factory>
 </hibernate-configuration>

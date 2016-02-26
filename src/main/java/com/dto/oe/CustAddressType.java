@@ -21,6 +21,12 @@ public class CustAddressType implements UserType {
 	/**
 	 * Returns the object from the 2 level cache
 	 */
+	
+	public int[] sqlTypes() {
+		return new int[] {SQL_TYPE};
+	} 
+	
+	
 	public Object assemble(Serializable cached, Object owner)
 			throws HibernateException {
 		return cached;
@@ -103,9 +109,7 @@ public class CustAddressType implements UserType {
 	public void nullSafeSet(final PreparedStatement statement, final Object value, final int index,
 			SessionImplementor arg3) throws HibernateException, SQLException {
 		if (value == null) {
-
 			statement.setNull(index, SQL_TYPE, OBJECT_TYPE);
-
 		} 
 		else 
 		{
@@ -115,9 +119,7 @@ public class CustAddressType implements UserType {
 			final Connection connection = statement.getConnection();
 			final STRUCT struct = new STRUCT(StructDescriptor.createDescriptor(	OBJECT_TYPE,connection), connection, values);
 			statement.setObject(index, struct, SQL_TYPE);
-
 		}
-
 	}
 
 	public Object replace(final Object original, final Object target,
@@ -130,7 +132,5 @@ public class CustAddressType implements UserType {
 		return Cust_addressData.class;
 	}
 
-	public int[] sqlTypes() {
-		return new int[] {SQL_TYPE};
-	}
+	
 }
