@@ -7,13 +7,13 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
-import com.dto.oe.Customers;
-import com.dto.oe.Inventories;
-import com.dto.oe.Order_Items;
-import com.dto.oe.Orders;
-import com.dto.oe.Product_Information;
-import com.dto.oe.UtcTimestampType;
-import com.dto.oe.Warehouses;
+import com.oe.dto.Customers;
+import com.oe.dto.Inventories;
+import com.oe.dto.Order_Items;
+import com.oe.dto.Orders;
+import com.oe.dto.Product_Information;
+import com.oe.dto.UtcTimestampType;
+import com.oe.dto.Warehouses;
 
 public class HibernateUtil {
 	public static void main(String[] args) {
@@ -76,6 +76,7 @@ public class HibernateUtil {
 			System.out.println(obj.getCUST_FIRST_NAME());
 			System.out.println(obj.getCust_addressData() + "cust address data");
 			System.out.println("phone numbers"+obj.getPhone_numbers());
+			System.out.println("Income Level "+obj.getINCOME_LEVEL());
 			session.close();
 
 		} catch (HibernateException e) {

@@ -16,10 +16,10 @@
 		<!-- <property name="hibernate.dialect">org.hibernate.spatial.dialect.oracle.OracleSpatial10gDialect</property>
 		<property name="hibernate.spatial.connection_finder">org.hibernate.spatial.dialect.oracle.DefaultConnectionFinder</property>
 		 -->
-		<mapping class="com.dto.oe.Inventories" />
-		<mapping class="com.dto.oe.Customers" />
-		<mapping class="com.dto.oe.Orders" />
-		<mapping class="com.dto.oe.Product_Information" />
-		<mapping class="com.dto.oe.Order_Items"/>
+		<mapping class="com.oe.dto.Inventories" />
+		<mapping class="com.oe.dto.Customers" />
+		<mapping class="com.oe.dto.Orders" />
+		<mapping class="com.oe.dto.Product_Information" />
+		<mapping class="com.oe.dto.Order_Items"/>
 	</session-factory>
 </hibernate-configuration>
